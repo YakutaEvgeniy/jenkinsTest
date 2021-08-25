@@ -15,7 +15,7 @@ namespace Test1
         [Test]
         public void Test1()
         {
-            Assert.AreEqual(value, "hello", "is not equal");
+            Assert.AreEqual("hello", value, "is not equal");
         }
     }
 }
