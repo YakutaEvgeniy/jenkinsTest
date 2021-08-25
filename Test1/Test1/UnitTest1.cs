@@ -5,11 +5,12 @@ namespace Test1
 {
     public class Tests
     {
-        string value = Environment.GetEnvironmentVariable("Name");
+        string value="123";
 
         [SetUp]
         public void Setup()
         {
+            value = Environment.GetEnvironmentVariable("Name");
         }
 
         [Test]
