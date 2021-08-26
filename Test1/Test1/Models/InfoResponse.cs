@@ -9,7 +9,7 @@ namespace Test1
 {
    public static class InfoResponse
     {
-        public static string Url => GetTestDataFromFile().GetValue<string>(".auth");
+        public static string Url => GetTestDataFromFile().GetValue<string>(".auth_url");
 
         public static string ApiUrl => GetTestDataFromFile().GetValue<string>(".vk_api");
 

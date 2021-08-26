@@ -12,7 +12,8 @@ namespace Test1.Tests
         [Test]
         public void Test1()
         {
-            AqualityServices.Browser.GoTo(InfoResponse.Url);
+            var url = InfoResponse.Url;
+            AqualityServices.Browser.GoTo(url);
             AqualityServices.Browser.Maximize();
             AqualityServices.Browser.WaitForPageToLoad();
 
