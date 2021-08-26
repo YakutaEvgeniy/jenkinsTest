@@ -13,9 +13,9 @@ namespace Test1.Tests
         public void Test1()
         {
             var url = InfoResponse.Url;
-            AqualityServices.Browser.GoTo(url);
-            AqualityServices.Browser.Maximize();
-            AqualityServices.Browser.WaitForPageToLoad();
+            //AqualityServices.Browser.GoTo(url);
+            //AqualityServices.Browser.Maximize();
+            //AqualityServices.Browser.WaitForPageToLoad();
 
             Assert.AreEqual("https://vk.com/", InfoResponse.Url, "is not equal");
 
@@ -24,7 +24,9 @@ namespace Test1.Tests
             Assert.AreEqual("PuV6j_.2&$m9h?UYY", User.Password, "password is wrong");
 
             Assert.AreEqual("+375291660762", User.Login, "login is wrong");
-            AqualityServices.Browser.Quit();
+
+            Assert.AreEqual("dasaefbWOD", url, "Error");
+            //AqualityServices.Browser.Quit();
         }
     }
 }
