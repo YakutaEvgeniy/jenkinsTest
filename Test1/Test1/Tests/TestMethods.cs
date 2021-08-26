@@ -3,7 +3,7 @@ using Test1.Models;
 
 namespace Test1.Tests
 {
-    class TestMethods
+    class TestMethods : BaseTest
     {
         [Test]
         public void Test1()

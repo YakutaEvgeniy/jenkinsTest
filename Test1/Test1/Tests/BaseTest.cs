@@ -11,5 +11,12 @@ namespace Test1.Tests
             AqualityServices.Browser.Maximize();
             AqualityServices.Browser.WaitForPageToLoad();
         }
+
+        [TearDown]
+        public void TearDown()
+        {
+            AqualityServices.Browser.Quit();
+        }
+
     }
 }
