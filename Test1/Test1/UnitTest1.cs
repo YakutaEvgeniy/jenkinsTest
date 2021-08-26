@@ -7,16 +7,21 @@ namespace Test1
     {
         string value="123";
 
+        string name = "Bill";
+
         [SetUp]
         public void Setup()
         {
-            value = Environment.GetEnvironmentVariable("Name");
+            value = InfoResponse.Value;
+            name = InfoResponse.Name;
         }
 
         [Test]
         public void Test1()
         {
-            Assert.AreEqual("hello", value, "is not equal");
+            Assert.AreEqual("ABC", value, "is not equal");
+
+            Assert.AreEqual("Tom", name, "Name is wrong");
         }
     }
 }
