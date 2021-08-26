@@ -25,8 +25,8 @@ namespace Test1.Tests
                 Assert.AreEqual("PuV6j_.2&$m9h?UYY", User.Password, "password is wrong");
 
                 Assert.AreEqual("+375291660762", User.Login, "login is wrong");
-                Assert.AreEqual("dasaefbWOD", url.ToString(), "Error");
-                Assert.AreEqual("dasaefbWOD", url.GetType(), "Error");
+                //Assert.AreEqual("dasaefbWOD", url.ToString(), "Error");
+                //Assert.AreEqual("dasaefbWOD", url.GetType(), "Error");
             });
 
             AqualityServices.Browser.GoTo($"{url2}");
