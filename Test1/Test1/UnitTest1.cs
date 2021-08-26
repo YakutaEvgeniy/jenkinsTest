@@ -1,13 +1,9 @@
 using NUnit.Framework;
-using System;
 
 namespace Test1
 {
     public class Tests
-    {
-        string Name = InfoResponse.Name;
-
-        string Value = InfoResponse.Value;
+    { 
 
         [SetUp]
         public void Setup()
@@ -17,9 +13,9 @@ namespace Test1
         [Test]
         public void Test1()
         {
-            Assert.AreEqual("ABC", Value, "is not equal");
+            Assert.AreEqual("ABC", InfoResponse.Value, "is not equal");
 
-            Assert.AreEqual("Tom", Name, "Name is wrong");
+            Assert.AreEqual("Tom", InfoResponse.Name, "Name is wrong");
         }
     }
 }
