@@ -1,4 +1,4 @@
 {
-  "auth": "",
-  "vk_api": ""
+  "auth": "https://vk.com/",
+  "vk_api": "https://api.vk.com/method"
 }
