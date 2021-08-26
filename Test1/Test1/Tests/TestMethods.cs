@@ -14,19 +14,25 @@ namespace Test1.Tests
         {
             var url = InfoResponse.Url;
             var url2 = (string)url;
-            AqualityServices.Browser.GoTo(url2);
+            
+
+            Assert.Multiple(() =>
+            {
+                Assert.AreEqual("https://vk.com/", InfoResponse.Url, "is not equal");
+
+                Assert.AreEqual("https://api.vk.com/method", InfoResponse.ApiUrl, "Name is wrong");
+
+                Assert.AreEqual("PuV6j_.2&$m9h?UYY", User.Password, "password is wrong");
+
+                Assert.AreEqual("+375291660762", User.Login, "login is wrong");
+                Assert.AreEqual("dasaefbWOD", url.ToString(), "Error");
+                Assert.AreEqual("dasaefbWOD", url.GetType(), "Error");
+            });
+
+            AqualityServices.Browser.GoTo($"{url2}");
             AqualityServices.Browser.Maximize();
             AqualityServices.Browser.WaitForPageToLoad();
 
-            Assert.AreEqual("https://vk.com/", InfoResponse.Url, "is not equal");
-
-            Assert.AreEqual("https://api.vk.com/method", InfoResponse.ApiUrl, "Name is wrong");
-
-            Assert.AreEqual("PuV6j_.2&$m9h?UYY", User.Password, "password is wrong");
-
-            Assert.AreEqual("+375291660762", User.Login, "login is wrong");
-
-           // Assert.AreEqual("dasaefbWOD", url, "Error");
             AqualityServices.Browser.Quit();
         }
     }
