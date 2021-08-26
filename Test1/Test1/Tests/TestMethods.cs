@@ -6,6 +6,7 @@ using Aquality.Selenium.Browsers;
 
 namespace Test1.Tests
 {
+    [TestFixture]
     class TestMethods
     {
         [SetUp]
