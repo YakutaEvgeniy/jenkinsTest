@@ -5,9 +5,9 @@ namespace Test1
 {
     public class Tests
     {
-        string name = InfoResponse.Name;
+        string Name = InfoResponse.Name;
 
-        string value = InfoResponse.Value;
+        string Value = InfoResponse.Value;
 
         [SetUp]
         public void Setup()
@@ -19,9 +19,9 @@ namespace Test1
         [Test]
         public void Test1()
         {
-            Assert.AreEqual("ABC", value, "is not equal");
+            Assert.AreEqual("ABC", Value, "is not equal");
 
-            Assert.AreEqual("Tom", name, "Name is wrong");
+            Assert.AreEqual("Tom", Name, "Name is wrong");
         }
     }
 }
