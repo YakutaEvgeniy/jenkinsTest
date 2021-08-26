@@ -1,0 +1,21 @@
+﻿using Aquality.Selenium.Core.Configurations;
+using Aquality.Selenium.Core.Utilities;
+using System;
+using System.Collections.Generic;
+using System.Reflection;
+using System.Text;
+
+namespace Test1.Models
+{
+    public static class User
+    {
+        public static int UserId => GetTestDataFromFile().GetValue<int>(".user_id");
+
+        public static string Login => GetTestDataFromFile().GetValue<string>(".login");
+
+        private static ISettingsFile GetTestDataFromFile()
+        {
+            return new JsonSettingsFile("TestData.UserData.json", Assembly.GetCallingAssembly());
+        }
+    }
+}

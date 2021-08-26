@@ -1,4 +1,5 @@
 using NUnit.Framework;
+using Test1.Models;
 
 namespace Test1
 {
@@ -13,9 +14,13 @@ namespace Test1
         [Test]
         public void Test1()
         {
-            Assert.AreEqual("ABC", InfoResponse.Value, "is not equal");
+            Assert.AreEqual("https://vk.com/", InfoResponse.Url, "is not equal");
 
-            Assert.AreEqual("Tom", InfoResponse.Name, "Name is wrong");
+            Assert.AreEqual("https://api.vk.com/method", InfoResponse.ApiUrl, "Name is wrong");
+
+            Assert.AreEqual(627657327, User.UserId, "id is wrong");
+
+            Assert.AreEqual("+375291660762", User.Login, "login is wrong");
         }
     }
 }

@@ -9,13 +9,22 @@
   <ItemGroup>
     <None Remove="Resources\settings.json" />
     <None Remove="TestData\Data.json" />
+    <None Remove="TestData\UrlData.json" />
+    <None Remove="TestData\UserData.json" />
+    <None Remove="TestData\VkParametrData.json" />
   </ItemGroup>
 
   <ItemGroup>
     <EmbeddedResource Include="Resources\settings.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
-    <EmbeddedResource Include="TestData\Data.json">
+    <EmbeddedResource Include="TestData\UrlData.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestData\UserData.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestData\VkParametrData.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
   </ItemGroup>

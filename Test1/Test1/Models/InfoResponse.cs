@@ -9,13 +9,13 @@ namespace Test1
 {
    public static class InfoResponse
     {
-        public static string Name => GetTestDataFromFile().GetValue<string>(".name");
+        public static string Url => GetTestDataFromFile().GetValue<string>(".auth");
 
-        public static string Value => GetTestDataFromFile().GetValue<string>(".value");
+        public static string ApiUrl => GetTestDataFromFile().GetValue<string>(".vk_api");
 
         private static ISettingsFile GetTestDataFromFile()
         {
-            return new JsonSettingsFile("TestData.Data.json", Assembly.GetCallingAssembly());
+            return new JsonSettingsFile("TestData.UrlData.json", Assembly.GetCallingAssembly());
         }
     }
 }
