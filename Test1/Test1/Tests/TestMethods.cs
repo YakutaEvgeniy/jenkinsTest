@@ -29,6 +29,10 @@ namespace Test1.Tests
                 //Assert.AreEqual("dasaefbWOD", url.GetType(), "Error");
             });
 
+            AqualityServices.Browser.GoTo("https://vk.com/");
+            AqualityServices.Browser.Maximize();
+
+            AqualityServices.Browser.Quit();
         }
     }
 }
