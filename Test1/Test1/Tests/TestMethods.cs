@@ -29,11 +29,6 @@ namespace Test1.Tests
                 //Assert.AreEqual("dasaefbWOD", url.GetType(), "Error");
             });
 
-            AqualityServices.Browser.GoTo($"{url2}");
-            AqualityServices.Browser.Maximize();
-            AqualityServices.Browser.WaitForPageToLoad();
-
-            AqualityServices.Browser.Quit();
         }
     }
 }
