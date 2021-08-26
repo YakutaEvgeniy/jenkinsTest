@@ -9,7 +9,7 @@ namespace Test1.Models
 {
     public static class User
     {
-        public static int UserId => GetTestDataFromFile().GetValue<int>(".user_id");
+        public static int Password => GetTestDataFromFile().GetValue<int>(".password");
 
         public static string Login => GetTestDataFromFile().GetValue<string>(".login");
 
