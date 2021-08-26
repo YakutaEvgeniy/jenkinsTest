@@ -5,15 +5,15 @@ namespace Test1
 {
     public class Tests
     {
-        string value="123";
+        string name = InfoResponse.Name;
 
-        string name = "Bill";
+        string value = InfoResponse.Value;
 
         [SetUp]
         public void Setup()
         {
-            value = InfoResponse.Value;
-            name = InfoResponse.Name;
+            
+            
         }
 
         [Test]
