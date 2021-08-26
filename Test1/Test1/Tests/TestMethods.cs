@@ -1,10 +1,27 @@
 ﻿using NUnit.Framework;
 using Test1.Models;
+using NUnit.Framework;
+
+using Aquality.Selenium.Browsers;
 
 namespace Test1.Tests
 {
-    class TestMethods : BaseTest
+    class TestMethods
     {
+        [SetUp]
+        public void SetUp()
+        {
+            AqualityServices.Browser.GoTo(InfoResponse.Url);
+            AqualityServices.Browser.Maximize();
+            AqualityServices.Browser.WaitForPageToLoad();
+        }
+
+        [TearDown]
+        public void TearDown()
+        {
+            AqualityServices.Browser.Quit();
+        }
+
         [Test]
         public void Test1()
         {
